@@ -110,26 +110,28 @@ body {
 
 .wrapper {
   /*add display:flex and set justify-content to space-between*/
+  /*align-items: center;*/
+  background-color: #5E324D;
   display: flex;
-  font-weight: 700;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .div-1, .div-2, .div-3 {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+  /*align-items: center;*/
   align-items: center;
-  background-color: #f16059;
-  color: #fff;
-  display: flex;
-  font-size: 1.6em;
-  height: 300px;
+  color: #fda18c;
+  font-size: 1em;
+  height: auto;
   justify-content: center;
   line-height: 1.5em;
-  width: 30%;
 }
 
-
-
+span {
+    font-family:'lora', serif;
+    font-size: 1.2em;
+}
 
 /* ==========================================================================
    Helper classes
@@ -292,5 +294,19 @@ body {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+}
+
+@media (min-width: 300px){
+    .div-2 {
+        border-right: 2px solid #fda18c;
+        border-left: 2px solid #fda18c;
+    }
+}
+
+@media (min-width: 768px){
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+        padding: 10px;
     }
 }
